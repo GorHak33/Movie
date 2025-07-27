@@ -1,0 +1,133 @@
+.mainFeaturedVideo {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   background: linear-gradient(
+  //     to right,
+  //     rgba(0, 0, 0, 0.6) 20%,
+  //     rgba(0, 0, 0, 0) 80%
+  //   );
+  //   z-index: 0;
+  // }
+}
+
+.coverImage {
+  width: 100vw;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.videoPlayer {
+  // position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.videoDetails {
+  position: absolute;
+  top: 8vh;
+  left: 8vw;
+  // z-index: 1;
+  max-width: 500px;
+  .category {
+    color: #797a7c;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  p {
+    color: white;
+    font-size: 18px;
+  }
+}
+
+.img_block {
+  max-width: 500px;
+  width: 100%; // <-- Ensure it can grow
+  img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+}
+
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.playButton {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  width: 130px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 24px;
+
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.playButton:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.moreInfoButton {
+  background-color: #08198c;
+  color: #fff;
+  border: none;
+  width: 130px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 24px;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.moreInfoButton:hover {
+  background-color: #0a22b8;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.videoDetails {
+  animation: fadeIn 0.8s ease-out 0.3s both;
+}
