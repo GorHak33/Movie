@@ -10,14 +10,11 @@ const MainFeatVideo = () => {
   const featured = useSelector((state: RootState) => state.dataSlice.featured);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  // New state to control whether to show video or just image
   const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
-    // Whenever featured changes, reset to showing image first
     setShowVideo(false);
 
-    // After 2 seconds, show video and try to play
     const playTimeout = setTimeout(() => {
       setShowVideo(true);
       if (videoRef.current) {
