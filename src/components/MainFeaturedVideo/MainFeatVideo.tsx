@@ -59,9 +59,7 @@ const MainFeatVideo = () => {
         <div className="img_block">
           <img
             src={`/assets/${
-              !featured?.VideoUrl || !showVideo
-                ? featured.TitleImage
-                : featured.CoverImage
+              !showVideo ? featured.TitleImage : featured.CoverImage
             }`}
             alt="Movie Logo"
             className="movieLogo"
